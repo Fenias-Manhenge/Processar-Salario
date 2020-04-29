@@ -44,7 +44,9 @@ namespace Processar_Salario
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            txtNome.Text("");
+            int codigo = int.Parse(txtCodigo.Text);
+
+            lstCodigo = codigo + "";
         }
     }
 }

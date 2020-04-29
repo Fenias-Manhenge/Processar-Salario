@@ -49,6 +49,7 @@
             this.btnProcessar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.Visualizar = new System.Windows.Forms.TableLayoutPanel();
+            this.lstCodigo = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -239,7 +240,7 @@
             this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.Location = new System.Drawing.Point(82, 289);
+            this.Visualizar.Location = new System.Drawing.Point(69, 338);
             this.Visualizar.Name = "Visualizar";
             this.Visualizar.RowCount = 5;
             this.Visualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -251,11 +252,20 @@
             this.Visualizar.TabIndex = 12;
             this.Visualizar.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // lstCodigo
+            // 
+            this.lstCodigo.FormattingEnabled = true;
+            this.lstCodigo.Location = new System.Drawing.Point(445, 254);
+            this.lstCodigo.Name = "lstCodigo";
+            this.lstCodigo.Size = new System.Drawing.Size(120, 69);
+            this.lstCodigo.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstCodigo);
             this.Controls.Add(this.Visualizar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
@@ -307,6 +317,7 @@
         private System.Windows.Forms.Button btnProcessar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel Visualizar;
+        private System.Windows.Forms.ListBox lstCodigo;
     }
 }
 
