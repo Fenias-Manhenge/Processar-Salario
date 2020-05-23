@@ -39,8 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.jrbMasculino = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbnFemenino = new System.Windows.Forms.RadioButton();
+            this.rbnMasculino = new System.Windows.Forms.RadioButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtDias = new System.Windows.Forms.TextBox();
             this.txtSalario = new System.Windows.Forms.MaskedTextBox();
@@ -48,8 +48,20 @@
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnProcessar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.Visualizar = new System.Windows.Forms.TableLayoutPanel();
             this.lstCodigo = new System.Windows.Forms.ListBox();
+            this.lstNome = new System.Windows.Forms.ListBox();
+            this.lstContacto = new System.Windows.Forms.ListBox();
+            this.lstSexo = new System.Windows.Forms.ListBox();
+            this.lstDiasTrab = new System.Windows.Forms.ListBox();
+            this.lblContacto1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblCodigo1 = new System.Windows.Forms.Label();
+            this.lblNome1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lstSalario = new System.Windows.Forms.ListBox();
+            this.lstSalMensal = new System.Windows.Forms.ListBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -97,6 +109,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(144, 20);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // txtNome
             // 
@@ -142,35 +155,35 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.jrbMasculino);
+            this.panel1.Controls.Add(this.rbnFemenino);
+            this.panel1.Controls.Add(this.rbnMasculino);
             this.panel1.Location = new System.Drawing.Point(347, 144);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(218, 55);
             this.panel1.TabIndex = 10;
             // 
-            // jrbMasculino
+            // rbnFemenino
             // 
-            this.jrbMasculino.AutoSize = true;
-            this.jrbMasculino.Location = new System.Drawing.Point(9, 18);
-            this.jrbMasculino.Name = "jrbMasculino";
-            this.jrbMasculino.Size = new System.Drawing.Size(88, 17);
-            this.jrbMasculino.TabIndex = 0;
-            this.jrbMasculino.TabStop = true;
-            this.jrbMasculino.Text = "MASCULINO";
-            this.jrbMasculino.UseVisualStyleBackColor = true;
+            this.rbnFemenino.AutoSize = true;
+            this.rbnFemenino.Location = new System.Drawing.Point(118, 18);
+            this.rbnFemenino.Name = "rbnFemenino";
+            this.rbnFemenino.Size = new System.Drawing.Size(81, 17);
+            this.rbnFemenino.TabIndex = 1;
+            this.rbnFemenino.TabStop = true;
+            this.rbnFemenino.Text = "FEMENINO";
+            this.rbnFemenino.UseVisualStyleBackColor = true;
+            this.rbnFemenino.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // radioButton2
+            // rbnMasculino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(118, 18);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(81, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "FEMENINO";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rbnMasculino.AutoSize = true;
+            this.rbnMasculino.Location = new System.Drawing.Point(9, 18);
+            this.rbnMasculino.Name = "rbnMasculino";
+            this.rbnMasculino.Size = new System.Drawing.Size(88, 17);
+            this.rbnMasculino.TabIndex = 0;
+            this.rbnMasculino.TabStop = true;
+            this.rbnMasculino.Text = "MASCULINO";
+            this.rbnMasculino.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -220,6 +233,7 @@
             this.btnProcessar.TabIndex = 17;
             this.btnProcessar.Text = "PROCESSAR";
             this.btnProcessar.UseVisualStyleBackColor = true;
+            this.btnProcessar.Click += new System.EventHandler(this.btnProcessar_Click);
             // 
             // label8
             // 
@@ -230,43 +244,150 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "OPERACOES";
             // 
-            // Visualizar
-            // 
-            this.Visualizar.ColumnCount = 7;
-            this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.Visualizar.Location = new System.Drawing.Point(69, 338);
-            this.Visualizar.Name = "Visualizar";
-            this.Visualizar.RowCount = 5;
-            this.Visualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Visualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Visualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Visualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Visualizar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Visualizar.Size = new System.Drawing.Size(667, 100);
-            this.Visualizar.TabIndex = 12;
-            this.Visualizar.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
             // lstCodigo
             // 
             this.lstCodigo.FormattingEnabled = true;
-            this.lstCodigo.Location = new System.Drawing.Point(445, 254);
+            this.lstCodigo.Location = new System.Drawing.Point(35, 292);
             this.lstCodigo.Name = "lstCodigo";
-            this.lstCodigo.Size = new System.Drawing.Size(120, 69);
+            this.lstCodigo.Size = new System.Drawing.Size(88, 134);
             this.lstCodigo.TabIndex = 19;
+            this.lstCodigo.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // lstNome
+            // 
+            this.lstNome.FormattingEnabled = true;
+            this.lstNome.Location = new System.Drawing.Point(137, 292);
+            this.lstNome.Name = "lstNome";
+            this.lstNome.Size = new System.Drawing.Size(93, 134);
+            this.lstNome.TabIndex = 20;
+            // 
+            // lstContacto
+            // 
+            this.lstContacto.FormattingEnabled = true;
+            this.lstContacto.Location = new System.Drawing.Point(246, 292);
+            this.lstContacto.Name = "lstContacto";
+            this.lstContacto.Size = new System.Drawing.Size(90, 134);
+            this.lstContacto.TabIndex = 21;
+            this.lstContacto.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            // 
+            // lstSexo
+            // 
+            this.lstSexo.FormattingEnabled = true;
+            this.lstSexo.Location = new System.Drawing.Point(347, 292);
+            this.lstSexo.Name = "lstSexo";
+            this.lstSexo.Size = new System.Drawing.Size(90, 134);
+            this.lstSexo.TabIndex = 22;
+            // 
+            // lstDiasTrab
+            // 
+            this.lstDiasTrab.FormattingEnabled = true;
+            this.lstDiasTrab.Location = new System.Drawing.Point(452, 292);
+            this.lstDiasTrab.Name = "lstDiasTrab";
+            this.lstDiasTrab.Size = new System.Drawing.Size(94, 134);
+            this.lstDiasTrab.TabIndex = 23;
+            // 
+            // lblContacto1
+            // 
+            this.lblContacto1.AutoSize = true;
+            this.lblContacto1.Location = new System.Drawing.Point(243, 264);
+            this.lblContacto1.Name = "lblContacto1";
+            this.lblContacto1.Size = new System.Drawing.Size(50, 13);
+            this.lblContacto1.TabIndex = 24;
+            this.lblContacto1.Text = "Contacto";
+            this.lblContacto1.Click += new System.EventHandler(this.lblContacto1_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(344, 264);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Sexo";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // lblCodigo1
+            // 
+            this.lblCodigo1.AutoSize = true;
+            this.lblCodigo1.Location = new System.Drawing.Point(32, 264);
+            this.lblCodigo1.Name = "lblCodigo1";
+            this.lblCodigo1.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo1.TabIndex = 26;
+            this.lblCodigo1.Text = "Codigo";
+            // 
+            // lblNome1
+            // 
+            this.lblNome1.AutoSize = true;
+            this.lblNome1.Location = new System.Drawing.Point(134, 264);
+            this.lblNome1.Name = "lblNome1";
+            this.lblNome1.Size = new System.Drawing.Size(35, 13);
+            this.lblNome1.TabIndex = 27;
+            this.lblNome1.Text = "Nome";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(449, 264);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "DIASTRAB";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // lstSalario
+            // 
+            this.lstSalario.FormattingEnabled = true;
+            this.lstSalario.Location = new System.Drawing.Point(562, 292);
+            this.lstSalario.Name = "lstSalario";
+            this.lstSalario.Size = new System.Drawing.Size(85, 134);
+            this.lstSalario.TabIndex = 29;
+            // 
+            // lstSalMensal
+            // 
+            this.lstSalMensal.FormattingEnabled = true;
+            this.lstSalMensal.Location = new System.Drawing.Point(668, 292);
+            this.lstSalMensal.Name = "lstSalMensal";
+            this.lstSalMensal.Size = new System.Drawing.Size(81, 134);
+            this.lstSalMensal.TabIndex = 30;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(559, 264);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 13);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "SALARIO.DIA";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(665, 264);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 13);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "SALARIO.MENSAL";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lstSalMensal);
+            this.Controls.Add(this.lstSalario);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblNome1);
+            this.Controls.Add(this.lblCodigo1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblContacto1);
+            this.Controls.Add(this.lstDiasTrab);
+            this.Controls.Add(this.lstSexo);
+            this.Controls.Add(this.lstContacto);
+            this.Controls.Add(this.lstNome);
             this.Controls.Add(this.lstCodigo);
-            this.Controls.Add(this.Visualizar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtSalario);
@@ -307,8 +428,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton jrbMasculino;
+        private System.Windows.Forms.RadioButton rbnFemenino;
+        private System.Windows.Forms.RadioButton rbnMasculino;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox txtDias;
         private System.Windows.Forms.MaskedTextBox txtSalario;
@@ -316,8 +437,20 @@
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnProcessar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TableLayoutPanel Visualizar;
         private System.Windows.Forms.ListBox lstCodigo;
+        private System.Windows.Forms.ListBox lstNome;
+        private System.Windows.Forms.ListBox lstContacto;
+        private System.Windows.Forms.ListBox lstSexo;
+        private System.Windows.Forms.ListBox lstDiasTrab;
+        private System.Windows.Forms.Label lblContacto1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblCodigo1;
+        private System.Windows.Forms.Label lblNome1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox lstSalario;
+        private System.Windows.Forms.ListBox lstSalMensal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
     }
 }
 
